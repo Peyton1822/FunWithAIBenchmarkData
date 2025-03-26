@@ -7,13 +7,13 @@ from utilitiesPackage.utilities import *
 from utilitiesPackage.CSV_Utilities import *
 from PDFPackage.PDFUtilities import *
 from dataVisualizationPackage.dataVisualization import visualize_data
+from imagePackage.image import display_team_image
 
 if __name__ == "__main__":
 
     CSV_Processor = MMLU_CSV_Processor("dataPackage/MMLU/data/", ["management_test.csv"])
     questions = CSV_Processor.read_data()
     print(len(questions), "questions read")
-
  
     myPDF = PDFUtilities()
     myPDF.create_question_PDF("Management Test", "MMLU", questions)
@@ -62,5 +62,8 @@ if __name__ == "__main__":
     for key in reading_level_indices.keys():
         print(key, ":", reading_level_indices[key])
     """
+
+    image = display_team_image()
+    print(image)
 
     visualize_data("./dataPackage/MMLU/data/nutrition_test.csv")
