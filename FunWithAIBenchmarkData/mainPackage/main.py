@@ -6,6 +6,7 @@ from readingLevelPackage.readingLevel import Reading_Level
 from utilitiesPackage.utilities import *
 from utilitiesPackage.CSV_Utilities import *
 from PDFPackage.PDFUtilities import *
+from dataVisualizationPackage.dataVisualization import visualize_data
 
 if __name__ == "__main__":
 
@@ -61,3 +62,5 @@ if __name__ == "__main__":
     for key in reading_level_indices.keys():
         print(key, ":", reading_level_indices[key])
     """
+
+    visualize_data("./dataPackage/MMLU/data/nutrition_test.csv")
